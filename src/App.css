@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0px;
+  margin: 0px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.min-height-width {
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-@keyframes logo-spin {
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.title-section {
+  position: absolute;
+  top: 40px
+}
+
+.title-txt {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+}
+
+.button-section {
+  background-color: white;
+  display: flex;
+  width: auto;
+  background: transparent;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: white;
+  color: black;
+  border-radius: 5px;
+
+}
+
+button:hover {
+  animation: button-click 0.5s ease forwards;
+}
+
+@keyframes button-click {
   from {
-    transform: rotate(0deg);
+    position: relative;
+    transform: translate(0px, 0px);
+
   }
+
   to {
-    transform: rotate(360deg);
+    position: relative;
+    transform: translate(0px, -8px);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
